@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import * as faceMesh from "@tensorflow-models/facemesh";
 import { drawMesh } from "../utilities";
 
-export function StaticImageMesh() {
+export function StaticFaceMesh() {
   const canvasRef = useRef(null);
   const imageRef = useRef(null);
   const [imageDimensions, setImageDimensions] = useState({ width: 0, height: 0 });

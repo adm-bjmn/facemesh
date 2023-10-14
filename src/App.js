@@ -1,5 +1,5 @@
 import "./App.css";
-import { StaticImageMesh } from "./components/staticImageMesh";
+import { StaticFaceMesh } from "./components/staticFaceMesh";
 import { VideoMesh } from "./components/videoMesh";
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div className="App-content">
-          <StaticImageMesh />
+          <StaticFaceMesh />
         </div>
       </header>
     </div>
