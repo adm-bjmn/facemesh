@@ -1,5 +1,4 @@
 import React, { useRef } from "react";
-import * as tf from "@tensorflow/tfjs";
 import * as faceMesh from "@tensorflow-models/facemesh";
 import Webcam from "react-webcam";
 import { drawMesh } from "../utilities";

@@ -1,8 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
-import * as faceMesh from "@tensorflow-models/facemesh";
-import { drawMesh } from "../utilities";
+//import key points detection from teonsoflow or other wise.
 
-export function StaticFaceMesh() {
+export function StaticImageKeyPoints() {
   const canvasRef = useRef(null);
   const imageRef = useRef(null);
   const [imageDimensions, setImageDimensions] = useState({ width: 0, height: 0 });
@@ -23,27 +22,17 @@ export function StaticFaceMesh() {
   }, []);
 
   useEffect(() => {
-    const runFacemesh = async () => {
-      const net = await faceMesh.load({
-        inputResolution: { width: 640, height: 640 },
-        scale: 0.8,
-      });
-
-      // Set canvas dimensions based on the loaded image's dimensions
-      const canvas = canvasRef.current;
-      canvas.width = imageDimensions.width;
-      canvas.height = imageDimensions.height;
-
-      // Make detections
-      const face = await net.estimateFaces(imageRef.current);
+    const runKeyPoints = async () => {
+      //   CODE FOR KEYPOINTS DETECTION TO GO HERE. //
+      //
+      //
       // Get canvas context
       const context = canvas.getContext("2d");
-
-      // drawmesh - app/utilities/drawmesh
-      drawMesh(face, context);
+      // utility function to be created
+      drawKeyPoints(estimates, context);
     };
 
-    runFacemesh();
+    runKeyPoints();
   }, [imageDimensions]);
 
   return (
