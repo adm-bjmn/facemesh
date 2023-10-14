@@ -13,3 +13,7 @@ https://www.youtube.com/watch?v=7lXYGDVHUNw&list=PLgNJO2hghbmhqne2KldbiWfzMGJSB6
 react-webcam
 
 ### Tools:
+
+React
+Yarn
+Prettier
